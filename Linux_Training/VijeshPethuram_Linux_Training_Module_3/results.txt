@@ -1,0 +1,32 @@
+vijesh@vijesh-VirtualBox:~/eurm3$ ls
+backup_manager.sh  dst  src
+
+vijesh@vijesh-VirtualBox:~/eurm3$ ls src
+file1.txt  file2.txt  file3.txt  file4.txt
+
+vijesh@vijesh-VirtualBox:~/eurm3$ chmod +x backup_manager.sh
+
+vijesh@vijesh-VirtualBox:~/eurm3$ ./backup_manager.sh 
+Less no. of args. Usage: ./backup_manager.sh <source> <dest.> <extension>
+
+vijesh@vijesh-VirtualBox:~/eurm3$ ./backup_manager.sh src dst .txt
+Files to be backed up:
+file1.txt - 6 bytes
+file2.txt - 6 bytes
+file3.txt - 6 bytes
+file4.txt - 6 bytes
+Starting backup...
+Copied: file1.txt
+Copied: file2.txt
+Copied: file3.txt
+Copied: file4.txt
+Backup completed. Report saved to dst/backup_report.log.
+
+vijesh@vijesh-VirtualBox:~/eurm3$ cd dst
+vijesh@vijesh-VirtualBox:~/eurm3/dst$ ls
+backup_report.log  file1.txt  file2.txt  file3.txt  file4.txt
+vijesh@vijesh-VirtualBox:~/eurm3/dst$ cat backup_report.log 
+Backup Summary:
+Total files processed: 4
+Total size of files backed up: 24 bytes
+Backup location: dst
