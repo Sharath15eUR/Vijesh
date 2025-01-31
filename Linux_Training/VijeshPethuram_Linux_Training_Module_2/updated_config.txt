@@ -1,0 +1,4 @@
+name 127.0.0.1;
+port 80;
+status_endpoint 127.0.0.1/health;
+error_log log/127.0.0.1_monitor.log;
