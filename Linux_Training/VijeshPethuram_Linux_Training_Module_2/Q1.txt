@@ -1,0 +1,13 @@
+1) Use the appropriate command to list all files larger than 1 MB in the current directory and save the output to a file.
+
+vijesh@vijesh-VirtualBox:~/eurtrainingM2$ ls -l
+total 14488
+-rw-rw-r-- 1 vijesh vijesh       41 Jan 30 23:30 file1.txt
+-rw-rw-r-- 1 vijesh vijesh       14 Jan 30 23:31 file2.txt
+-rwxr-x--- 1 root   root   14824851 Jan 30 23:29 linux-commands-handbook.pdf
+vijesh@vijesh-VirtualBox:~/eurtrainingM2$ ls -lh | awk '$5 > 1048576 {print $9}' > lsfiles.txt
+vijesh@vijesh-VirtualBox:~/eurtrainingM2$ ls
+file1.txt  file2.txt  linux-commands-handbook.pdf  lsfiles.txt
+vijesh@vijesh-VirtualBox:~/eurtrainingM2$ cat lsfiles.txt 
+linux-commands-handbook.pdf
+vijesh@vijesh-VirtualBox:~/eurtrainingM2$ 

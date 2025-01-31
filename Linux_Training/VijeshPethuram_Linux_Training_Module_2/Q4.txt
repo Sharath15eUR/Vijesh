@@ -1,0 +1,3 @@
+4) Write a code to identify the process with the highest memory usage and then terminate it.
+
+vijesh@vijesh-VirtualBox:~/eurtrainingM2$ kill $(ps -eo pid,%mem,comm --sort=-%mem | awk 'NR==2 {print $1}')

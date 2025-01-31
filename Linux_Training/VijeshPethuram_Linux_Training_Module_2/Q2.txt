@@ -1,0 +1,13 @@
+2) Replace all occurrences of "localhost" with "127.0.0.1" in a configuration file named config.txt, and save the updated file as updated_config.txt.
+
+vijesh@vijesh-VirtualBox:~/eurtrainingM2$ cat config.txt 
+name localhost;
+port 80;
+status_endpoint localhost/health;
+error_log log/localhost_monitor.log;
+vijesh@vijesh-VirtualBox:~/eurtrainingM2$ sed 's/localhost/127.0.0.1/g' config.txt > updated_config.txt
+vijesh@vijesh-VirtualBox:~/eurtrainingM2$ cat updated_config.txt 
+name 127.0.0.1;
+port 80;
+status_endpoint 127.0.0.1/health;
+error_log log/127.0.0.1_monitor.log;

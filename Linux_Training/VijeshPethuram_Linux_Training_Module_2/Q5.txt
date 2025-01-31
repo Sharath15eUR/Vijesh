@@ -1,0 +1,5 @@
+5) Use the networking tool command and print all the gateway available in a sorted manner
+
+vijesh@vijesh-VirtualBox:~$ netstat -rn | awk 'NR>2 {print $2}' | sort -u
+0.0.0.0
+10.0.2.2
