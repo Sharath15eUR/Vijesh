@@ -1,0 +1,4 @@
+name localhost;
+port 80;
+status_endpoint localhost/health;
+error_log log/localhost_monitor.log;
