@@ -1,0 +1,48 @@
+root@vijesh-VirtualBox:/home/vijesh/eur5# ls -l
+total 8
+-rwxr-xr-x 1 root root 2589 Feb  2 17:18 file_analyzer.sh
+drwxr-xr-x 5 root root 4096 Feb  2 16:54 folders
+
+root@vijesh-VirtualBox:/home/vijesh/eur5# tree folders
+folders
+├── dir1
+│   ├── file1.txt
+│   ├── file2.txt
+│   └── file3.txt
+├── dir2
+│   ├── file4.txt
+│   └── file5.txt
+└── dir3
+    └── file6.txt
+
+3 directories, 6 files
+
+root@vijesh-VirtualBox:/home/vijesh/eur5# ./file_analyzer.sh -d folders -k f3
+Found 'f3' in folders/dir1/file3.txt
+No match found for 'f3' in any files at folders/dir2
+No match found for 'f3' in any files at folders/dir3
+No match found for 'f3' in any files at folders
+Exit status: 0
+
+root@vijesh-VirtualBox:/home/vijesh/eur5# ./file_analyzer.sh -f folders/dir3/file6.txt -k f6
+Found 'f6' in folders/dir3/file6.txt
+Exit status: 0
+
+root@vijesh-VirtualBox:/home/vijesh/eur5# ./file_analyzer.sh --help
+Usage: ./file_analyzer.sh [options]
+
+Options:
+
+  -d <directory> Directory to search for the keyword
+  -k <keyword> Keyword to search for
+  -f <file>  File to search directly for the keyword
+  --help   Display help menu
+
+root@vijesh-VirtualBox:/home/vijesh/eur5# ./file_analyzer.sh -f file.txt -d folder -k f6
+Error! Cannot specify both -d and -f options
+
+root@vijesh-VirtualBox:/home/vijesh/eur5# ls
+errors.log  file_analyzer.sh  folders
+
+root@vijesh-VirtualBox:/home/vijesh/eur5# cat errors.log 
+Error! Cannot specify both -d and -f options
