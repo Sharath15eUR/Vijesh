@@ -379,7 +379,8 @@ MULTICAST: The interface supports multicast communication.
 ```
 mtu 1500
 ```plaintext
-It is the Maximum transmission unit. This is the maximum size of the packets that can be transmitted over the network interface, measured in bytes.
+It is the Maximum transmission unit.
+This is the maximum size of the packets that can be transmitted over the network interface, measured in bytes.
 ```
 inet 192.168.56.102
 ```plaintext
@@ -400,34 +401,58 @@ The IPv6 address assigned to the interface.
 
 ether 08:00:27:f7:cb:da
 ```plaintext
-It is the MAC address (hardware address) of the network interface. This is a unique identifier assigned to the network interface for communication on the physical network.
+It is the MAC address (hardware address) of the network interface.
+This is a unique identifier assigned to the network interface for communication on the physical network.
 ```
 
 # Q5. Understand what happens when duplicate IPs configured in a network.
 ```plaintext
-When two devices on the same network accidentally get assigned the same IP address, it can cause a lot of problems. Devices on the network use IP addresses to identify each other and communicate. When two devices have the same IP address, the network gets confused and doesn't know which device to communicate. This can cause devices to have trouble communicating with other devices. When there are duplicate IP addresses, devices might constantly try to figure out which one is correct. This creates extra ARP traffic on the network, which can slow everything down for everyone.  Also, printing or file sharing services might stop working properly. To solve this, use DHCP to dynamically assign the ip addresses to the devices. Or, manually change the ip address to a differnt ip so that they are unique.
+When two devices on the same network accidentally get assigned the same IP address, it can cause a lot of problems.
+Devices on the network use IP addresses to identify each other and communicate.
+ When two devices have the same IP address, the network gets confused and doesn't know which device to communicate.
+This can cause devices to have trouble communicating with other devices. When there are duplicate IP addresses,
+devices might constantly try to figure out which one is correct. This creates extra ARP traffic on the network,
+which can slow everything down for everyone.  Also, printing or file sharing services might stop working properly.
+To solve this, use DHCP to dynamically assign the ip addresses to the devices.
+Or, manually change the ip address to a differnt ip so that they are unique.
 ```
 
 # Q6. Understand how to access remote system using (VNC viewer, Anydesk, teamviewer and remote desktop connections)
 
 ### Using AnyDesk:
 ```plaintext
-To access a remote system, we first need to download and install the AnyDesk application on both our computer and the remote computer. Then, we will see our unique AnyDesk address displayed in the "This Desk" section. This address serves as our identifier, allowing others to connect to your computer. Ensure that the remote computer also has AnyDesk installed and running.
-Ask the remote user to provide their AnyDesk address, which is a unique number displayed on their AnyDesk application. In our AnyDesk application, enter this remote AnyDesk address into the "Remote Desk" field and click the Connect button. The remote user will receive a connection request on their AnyDesk application. They need to click "Accept" to grant you access to their computer. Once the connection is accepted, we will be able to see and control the remote computer's desktop. AnyDesk provides various features to enhance the remote session, such as file transfer, which allows us to move files between your computer and the remote computer, and a chat feature to communicate with the remote user. We can also adjust settings like display quality and input control to optimize your experience.
+To access a remote system, we first need to download and install the AnyDesk application
+on both our computer and the remote computer. Then, we will see our unique AnyDesk address displayed
+in the "This Desk" section. This address serves as our identifier, allowing others to connect to your computer.
+Ensure that the remote computer also has AnyDesk installed and running.
+Ask the remote user to provide their AnyDesk address, which is a unique number displayed on their AnyDesk application.
+In our AnyDesk application, enter this remote AnyDesk address into the "Remote Desk" field and click the Connect button.
+The remote user will receive a connection request on their AnyDesk application.
+They need to click "Accept" to grant you access to their computer.
+Once the connection is accepted,we will be able to see and control the remote computer's desktop.
+AnyDesk provides various features to enhance the remote session, such as file transfer,
+which allows us to move files between your computer and the remote computer.
+We can also adjust settings like display quality and input control to optimize your experience.
 When we are finished with the remote session, we can end it by closing the AnyDesk window or clicking the "Disconnect" button. 
 ```
 ![adesk](./imgs/7.png)
 
 ### Using VNC:
 ```plaintext
-Install the RealVNC software and confirm it is running on the remote machine. Download and install VNC Viewer on the local machine.
-Open VNC Viewer, enter the IP address or hostname of the remote machine, and click Connect. Then enter the VNC server password. Once connected, you will be able to see the remote desktop and control it.
+Install the RealVNC software and confirm it is running on the remote machine.
+Download and install VNC Viewer on the local machine.
+Open VNC Viewer, enter the IP address or hostname of the remote machine, and click Connect.
+Then enter the VNC server password. Once connected, you will be able to see the remote desktop and control it.
 
 ```
 
 ### Using TeamViewer:
 ```plaintext
-Install TeamViewer on both the local and remote machine. Launch TeamViewer on both machines. Each will display a unique ID and password. Get the TeamViewer ID and password of the remote machine. Enter the remote ID in your TeamViewer application and click"Connect. Then enter the remote machine's TeamViewer password. Once connected, you can control the remote desktop.
+Install TeamViewer on both the local and remote machine.
+Launch TeamViewer on both machines.
+Each will display a unique ID and password. Get the TeamViewer ID and password of the remote machine.
+Enter the remote ID in your TeamViewer application and click"Connect.
+Then enter the remote machine's TeamViewer password. Once connected, you can control the remote desktop.
 ```
 
 # Q7. How to check your default gateway is reachable or not and understand about default gateway.
@@ -441,8 +466,13 @@ root@vijesh-VirtualBox:/home/vijesh# ip route
 
 ### Explanation of Default Gateway:
 ```plaintext
-The default gateway is a crucial component in networking. The default gateway routes traffic from our local network to the internet. It acts as an intermediary that forwards data packets to their destination. Without a default gateway, devices on our local network would be unable to communicate with devices on external networks. 
-The default gateway often performs NAT, which allows multiple devices on a local network to share a single public IP address for internet access. This helps conserve public IP addresses and provides an additional layer of security. When a device sends data to an IP address outside its local subnet, the data is sent to the default gateway. The gateway then determines the best route for the data to take to reach its destination.
+The default gateway is a crucial component in networking. The default gateway routes traffic from our local network to the internet.
+It acts as an intermediary that forwards data packets to their destination.
+Without a default gateway, devices on our local network would be unable to communicate with devices on external networks. 
+The default gateway often performs NAT, which allows multiple devices on a local network to share a single public IP address for internet access.
+This helps conserve public IP addresses and provides an additional layer of security.
+When a device sends data to an IP address outside its local subnet, the data is sent to the default gateway.
+The gateway then determines the best route for the data to take to reach its destination.
 ```
 ![route](./imgs/6.png)
 
@@ -487,7 +517,8 @@ MULTICAST: The interface supports multicast communication.
 ```
 mtu 1500
 ```plaintext
-It is the Maximum transmission unit. This is the maximum size of the packets that can be transmitted over the network interface, measured in bytes.
+It is the Maximum transmission unit.
+This is the maximum size of the packets that can be transmitted over the network interface, measured in bytes.
 ```
 inet 192.168.56.102
 ```plaintext
@@ -508,7 +539,8 @@ The IPv6 address assigned to the interface.
 
 ether 08:00:27:f7:cb:da
 ```plaintext
-It is the MAC address (hardware address) of the network interface. This is a unique identifier assigned to the network interface for communication on the physical network.
+It is the MAC address (hardware address) of the network interface.
+This is a unique identifier assigned to the network interface for communication on the physical network.
 ```
 
 # Q9. Log in to your home router's web interface (usually at 192.168.1.1 or 192.168.0.1) and check the connected devices list.
@@ -522,16 +554,20 @@ Dynamic Host Configuration Protocol DHCP is a network management protocol used t
 These are the processes happening in backend on our network to assign IP addresses:
 
 ## 1. DHCP DISCOVER
-When a device connects to a network and needs an IP address, it broadcasts a DHCP DISCOVER message to the network. This message is sent to the special IP address 255.255.255.255, which means it is broadcast to all devices on the local network.
+When a device connects to a network and needs an IP address, it broadcasts a DHCP DISCOVER message to the network. 
+This message is sent to the special IP address 255.255.255.255, which means it is broadcast to all devices on the local network.
 
 ## 2. DHCP OFFER
-When the DHCP server receives the DHCP DISCOVER message, it responds with a DHCP OFFER message. This message includes an available IP address that the server is offering to the client, along with additional configuration information such as the subnet mask, default gateway, and DNS server addresses.
+When the DHCP server receives the DHCP DISCOVER message, it responds with a DHCP OFFER message. 
+This message includes an available IP address that the server is offering to the client, along with additional configuration information such as the subnet mask, default gateway, and DNS server addresses.
 
 ## 3. DHCP REQUEST
-The client receives the DHCP OFFER message and responds with a DHCP REQUEST message. This message indicates that the client is accepting the offered IP address and requests that the server assign it. The DHCP REQUEST is also broadcast to the network, allowing other DHCP servers to see that the client is accepting an offer from a specific server.
+The client receives the DHCP OFFER message and responds with a DHCP REQUEST message. 
+This message indicates that the client is accepting the offered IP address and requests that the server assign it. The DHCP REQUEST is also broadcast to the network, allowing other DHCP servers to see that the client is accepting an offer from a specific server.
 
 ## 4. DHCP ACKNOWLEDGE
-Finally, the DHCP server responds with a DHCP ACKNOWLEDGE (DHCP ACK) message. This message confirms that the IP address has been assigned to the client. The client can now use the assigned IP address to communicate on the network.
+Finally, the DHCP server responds with a DHCP ACKNOWLEDGE (DHCP ACK) message. 
+This message confirms that the IP address has been assigned to the client. The client can now use the assigned IP address to communicate on the network.
 
 # Q11 Using a terminal, connect to a remote machine via SSH and telnet.
 
