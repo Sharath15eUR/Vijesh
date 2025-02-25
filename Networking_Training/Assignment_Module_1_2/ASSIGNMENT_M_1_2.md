@@ -291,6 +291,7 @@ Desktop    Downloads  eur5   eurtest  Music     Public      snap       testing  
 # Q4. Understand linux utility commands like - Ping, arp (Understand each params from ifconfig output)
 ## PING command:
 The ping command is used to test the reachability of a host on an IP network. It works by sending ICMP Echo Request packets to the target host and waiting for an ICMP Echo Reply.
+
 Some common options:
 -c is used to set the total count of packet to be sent.
 
