@@ -1,2 +1,2 @@
-<h2>embedUR Systems - Linux Assessment Assignments</h2>
-Submitted by Vijesh Pethuram K - Mepco Schlenk Engineering College
+<h2>embedUR Systems - Assignments</h2>
+Vijesh Pethuram K - Mepco Schlenk Engineering College
