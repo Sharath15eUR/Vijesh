@@ -1,6 +1,6 @@
----
+
 # WIFI Module 4 assignment
----
+
 
 ## Q1) What is the significance of MAC layer and in which position it is placed in the OSI model
 
